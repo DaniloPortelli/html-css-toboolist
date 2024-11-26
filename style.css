@@ -11,9 +11,13 @@
 /* Header */
 header div{
     background-image: url(../img/Logo.png);
-    height: 50px;
     width: 50px;
     margin-left: 10px;
+}
+
+header{
+    background-color: white;
+    margin-bottom: 20px;
 }
 
 header div h1{
@@ -25,12 +29,12 @@ header div h1{
 /* Main */
 
 .contenitore1{
-    height: 50px;
     width: 80%;
     background-color: white;
     margin: auto;
-    margin-bottom: 8px;
-    border-radius: 1%;
+    border-radius: 5%;
+    padding-top: 20px;
+    padding-left: 20px;
 }
 
 main div div{
@@ -39,6 +43,7 @@ main div div{
     text-align: center;
     display: inline-block;
     background-color: white;
+    padding: 5px;
 }
 
 main section{
@@ -63,15 +68,13 @@ font-weight: ;
 
 
 .addtask{
-    height: 30px;
     width: 90px;
     background-color: #47ADF1;
     display: inline-block;
 }
 
 .addsection{
-    height: 30px;
-    width: 90px;
+    width: 120px;
     background-color: #FFFFFF;
     display: inline-block;
     border: solid lightgray;
@@ -80,7 +83,6 @@ font-weight: ;
 
 
 .contenitore2{
-    height: 500px;
     width: 80%;
     background-color: white;
     margin: auto;
@@ -89,7 +91,6 @@ font-weight: ;
 }
 
 .editorial{
-    height: 30px;
     width: 90px;
     background-color: #47ADF1;
     display: inline-block;
