@@ -1,0 +1,79 @@
+/* Reset */
+*{
+    margin: auto;
+    box-sizing: border-box;
+    margin: 0;
+    background-color: #F6F8F9;
+    font-family: sans-serif;
+
+}
+
+/* Header */
+header div{
+    background-image: url(../img/Logo.png);
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+}
+
+header div h1{
+    margin-left: 60px;
+    font-weight: 1000;
+    color: #041931;
+}
+
+/* Main */
+
+.contenitore1{
+    height: 50px;
+    width: 80%;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 8px;
+    border-radius: 1%;
+}
+
+main div div{
+    color: white;
+    border-radius: 10%;
+    text-align: center;
+}
+
+main strong{
+background-color: white;
+font-weight: ;
+
+}
+
+.addtask{
+    height: 30px;
+    width: 90px;
+    background-color: #47ADF1;
+    display: inline-block;
+}
+
+.addsection{
+    height: 30px;
+    width: 90px;
+    background-color: #FFFFFF;
+    display: inline-block;
+    border: solid lightgray;
+    color: lightgray;
+}
+
+
+.contenitore2{
+    height: 500px;
+    width: 80%;
+    background-color: white;
+    margin: auto;
+    border-radius: 1%;
+    padding: 30px
+}
+
+.editorial{
+    height: 30px;
+    width: 90px;
+    background-color: #47ADF1;
+    display: inline-block;
+}
