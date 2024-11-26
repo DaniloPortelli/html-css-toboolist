@@ -35,15 +35,32 @@ header div h1{
 
 main div div{
     color: white;
-    border-radius: 10%;
+    border-radius: 8%;
     text-align: center;
+    display: inline-block;
+    background-color: white;
+}
+
+main section{
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+div div{
+    margin-bottom: 10px;
+
+}
+
+main span{
+    background-color: white;
 }
 
 main strong{
 background-color: white;
 font-weight: ;
-
 }
+
+
 
 .addtask{
     height: 30px;
@@ -77,3 +94,19 @@ font-weight: ;
     background-color: #47ADF1;
     display: inline-block;
 }
+
+.check{
+    color: #97D7C9;
+    border-color: #97D7C9;
+    border: solid;
+    border-radius: 50%;
+}
+
+.cross{
+    color: #EE7F7A;
+    border-color: #EE7F7A;
+    border: solid;
+    border-radius: 50%;
+}
+
+
