@@ -3,6 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
@@ -20,8 +23,6 @@
     <main>
         <div class="contenitore1">
             <section>
-                <div class="addtask">Add Task</div>
-                <div class="addsection">Add Section</div>
             </section>
         </div>
 
@@ -95,6 +96,68 @@
                 <div class="editorial">Editorial</div>
             </details>
         </div>
+
+        <div id="root"></div>
+
+        <script type="text/babel">
+            const { useState } = React;
+
+            function Counter() {
+                const [addTask, setAddTask] = useState(false);
+                const [newTask, setNewTask] = useState("")
+                const [newTasks, setNewTasks] = useState([])
+
+                function handleNewTasks(nt) {
+                    if (newTask.trim() === '') return; // blocca task vuote
+                    setNewTasks(prev => [...prev, nt]);
+                    setNewTask(''); // svuota l'input dopo l'aggiunta
+                }
+
+
+                console.log(newTask, newTasks)
+                return (
+                    <div>
+                        <button className="addtask" onClick={() => setAddTask(prev => !prev)}>Add Task</button>
+
+                        {addTask && (
+                            <div>
+                                <input
+                                    type="text"
+                                    value={newTask}
+                                    onChange={e => setNewTask(e.target.value)}
+                                />
+
+                                <button
+                                    className="addtask"
+                                    onClick={() => handleNewTasks(newTask)}>
+                                    Create
+                                </button>
+                            </div>
+                        )}
+
+                        {
+                            newTasks.length > 0 ? (
+                                <details>
+                                    <summary> New Task</summary>
+
+                                    <br/>
+                                        <span>
+                                            <div class="check">&check;</div> Quarterly Newsletter
+                                        </span>
+                                        <div class="editorial">Editorial</div>
+                                </details>
+                            ) : (
+                                <p></p>
+                            )
+                        }
+
+                    </div>
+                );
+            }
+
+            ReactDOM.render(<Counter />, document.getElementById('root'));
+
+        </script>
     </main>
 </body>
 
