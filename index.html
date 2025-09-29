@@ -103,7 +103,6 @@
             const { useState } = React;
 
             function Counter() {
-                const [addTask, setAddTask] = useState(false);
                 const [newTask, setNewTask] = useState("")
                 const [newTasks, setNewTasks] = useState([])
 
@@ -116,36 +115,36 @@
 
                 console.log(newTask, newTasks)
                 return (
-                    <div>
-                        <button className="addtask" onClick={() => setAddTask(prev => !prev)}>Add Task</button>
-
-                        {addTask && (
-                            <div>
-                                <input
-                                    type="text"
-                                    value={newTask}
-                                    onChange={e => setNewTask(e.target.value)}
-                                />
-
-                                <button
-                                    className="addtask"
-                                    onClick={() => handleNewTasks(newTask)}>
-                                    Create
-                                </button>
-                            </div>
-                        )}
+                    <div className="newTasksSection">
+                        <button
+                            className="newTasksButton"
+                            onClick={() => handleNewTasks(newTask)}>
+                            Create New Task
+                        </button>
+                        <input
+                            type="text"
+                            value={newTask}
+                            onChange={e => setNewTask(e.target.value)}
+                        />
 
                         {
                             newTasks.length > 0 ? (
-                                <details>
-                                    <summary> New Task</summary>
+                                <div className="contenitore2">
+                                    <h3>
+                                        Personal Tasks
+                                    </h3>
 
-                                    <br/>
-                                        <span>
-                                            <div class="check">&check;</div> Quarterly Newsletter
-                                        </span>
-                                        <div class="editorial">Editorial</div>
-                                </details>
+                                    {
+                                        newTasks.map((nt, i) => {
+                                            return (
+                                                <ul>
+                                                    <li key={i} >{nt}</li>
+
+                                                </ul>
+                                            )
+                                        })
+                                    }
+                                </div>
                             ) : (
                                 <p></p>
                             )
